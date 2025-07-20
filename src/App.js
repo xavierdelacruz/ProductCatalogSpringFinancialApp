@@ -12,35 +12,42 @@ function App() {
 
   const fetchProducts = async (search, pageNum) => {
     setLoading(true);
+    setProducts([]);
+
     try {
       const endpoint = search
         ? `${API_BASE_URL}/search?query=${encodeURIComponent(search)}&page=${pageNum}`
-        : `${API_BASE_URL}?page=${pageNum}`;
+        : `${API_BASE_URL}/products?page=${pageNum}`;
 
       const response = await axios.get(endpoint);
       setProducts(response.data);
     } catch (error) {
       console.error('Failed to fetch products:', error);
     }
+
     setLoading(false);
   };
 
   useEffect(() => {
     fetchProducts(lastSearch, page);
-  }, [page]);
+  }, [page, lastSearch]);
 
   const handleSearchKeyPress = (e) => {
     if (e.key === 'Enter') {
       setPage(1);
       setLastSearch(query);
-      fetchProducts(query, 1);
     }
   };
 
   const handleSearchClick = () => {
     setPage(1);
     setLastSearch(query);
-    fetchProducts(query, 1);
+  };
+
+  const handleGetAllClick = () => {
+    setQuery('');
+    setLastSearch('');
+    setPage(1);
   };
 
   const generateProducts = async () => {
@@ -68,6 +75,9 @@ function App() {
         />
         <button onClick={handleSearchClick} style={{ marginRight: '0.5rem' }}>
           Search
+        </button>
+        <button onClick={handleGetAllClick} style={{ marginRight: '0.5rem' }}>
+          Get All Products
         </button>
         <button onClick={generateProducts}>Generate 1000 Products</button>
       </div>
