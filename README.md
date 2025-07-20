@@ -7,15 +7,12 @@ A simple React single-page application (SPA) that interacts with the Product Cat
 ## Getting Started
 
 ### Prerequisites
-
 - [Node.js](https://nodejs.org/en/) (v16+ recommended)
 - npm (comes with Node.js)
 
----
 
 ##  Installation
-
-1. **Clone the repository**
+Clone the repository
 
 ```
    git clone <your-repo-url>
