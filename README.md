@@ -1,8 +1,5 @@
-# ProductCatalogSpringFinancialApp
-Front end application to support the backend for Product Catalog searching
 
 # Product Catalog Frontend
-
 A simple React single-page application (SPA) that interacts with the Product Catalog backend API. It supports product browsing, searching, and pagination.
 
 ---
