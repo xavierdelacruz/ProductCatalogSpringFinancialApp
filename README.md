@@ -39,10 +39,10 @@ npm start
 ## Features
 - Search products by name, brand, category, etc.
 - Paginate results with next/previous controls
-- Live data fetched via axios from a .NET API
+- Live data fetched via axios from the associated .NET backend API created for this challenge
 
 ## Notes:
-If you see CORS errors, update your backend (.NET) to allow http://localhost:3000
+If you see CORS errors, update your backend (.NET) to allow http://localhost:3000 if it is not already configured.
 
 To change the backend API URL, edit in App.js:
 ```
