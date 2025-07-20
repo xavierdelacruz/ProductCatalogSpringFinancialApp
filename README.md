@@ -36,6 +36,8 @@ npm start
 
 - Make sure your backend is running on https://localhost:7105 before testing the frontend.
 
+It should look like this: ![alt text](image.png)
+
 ## Features
 - Search products by name, brand, category, etc.
 - Paginate results with next/previous controls
