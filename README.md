@@ -50,9 +50,11 @@ Make sure your backend is running on https://localhost:7105 before testing the f
 ⚠️ Notes
 If you see CORS errors, update your backend (.NET) to allow http://localhost:3000
 
-To change the backend API URL, edit:
-// src/App.js
+To change the backend API URL, edit in App.js:
+```
 const API_BASE_URL = 'https://localhost:7105/api/ProductCatalog';
+```
+
 🧪 Scripts
 ```
 npm run build      # Production build
